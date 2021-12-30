@@ -82,9 +82,6 @@ tic
                     cursor_pos(2)=cursor_pos(2)+1;
                     text(cursor_pos(1),cursor_pos(2),'\diamondsuit','HorizontalAlignment','Center','color','r');
                 end
-            case -1 % long blink to stop the maze 
-                title('Try again later !','FontSize',20)
-                return 
             otherwise
         end
         pause(2); %little break between head movments
