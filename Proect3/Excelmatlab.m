@@ -15,13 +15,6 @@ function string=Excelmatlab(DROITEDROITE)
         end
         n=n+1;
     end
-    %figure(1); 
-
-    %plot(DROITEDROITE(1:n,1), DROITEDROITE(1:n,2));
-    %title("X")
-    %figure(2);
-    %plot(DROITEDROITE(1:n, 1), DROITEDROITE(1:n,3)); 
-    %title("Y")
 
     a=DROITEDROITE(1:n,:);
     peak_x=0;
