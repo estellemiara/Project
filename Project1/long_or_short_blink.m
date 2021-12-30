@@ -4,14 +4,14 @@
  
     for i=1:n
        new_distance=""; 
-       if (distance(i,1)>100 && mod(i,2))
+       if (distance(i,1)>100 && mod(i,2)) %long blink
            new_distance="-";
        end
        
-       if (distance(i,1)<100 && mod(i,2) )
+       if (distance(i,1)<100 && mod(i,2) )  %short blink
             new_distance=".";
         end
-       if (distance(i,1)>400 && ~mod(i,2) )
+       if (distance(i,1)>400 && ~mod(i,2) ) %distance between 2 blinks
            new_distance=" ";
        end
        str=strcat(str, new_distance);
