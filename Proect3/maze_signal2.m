@@ -158,11 +158,3 @@ while max(state)>1 % remove walls until there is one simply connected region
     
 end
 return
-
-
-function path=create_path()
- chemin=actions_to_executate();   
- i=length(chemin);
- path=chemin(i);
-return
-
