@@ -1,6 +1,6 @@
 
 function morse_letter_matlab(text1)
-%text1=string(input ('(Please Enter morse code: \n','s'));
+%create a dictionnary
 morse={'.-','--','..-','...','-...','-', '--.'};
 letter={'A','M','U','S','E','B','T'};
 %----------------
