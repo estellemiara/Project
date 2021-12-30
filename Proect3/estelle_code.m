@@ -1,10 +1,8 @@
 function string=estelle_code()
     %instantiate the library
-    %disp('Loading the library...');
     lib = lsl_loadlib();
 
     % resolve a stream...
-    %disp('Resolving an EEG stream...');
     result = {};
     M=524288;
     N=4;
@@ -15,10 +13,9 @@ function string=estelle_code()
 
 
     % create a new inlet
-    %disp('Opening an inlet...');
     inlet = lsl_inlet(result{1});
 
-    disp('Begin recording data- MOVE YOUR HEAD');
+    disp('Recording data - MOVE YOUR HEAD');
     i=1;
 
     t0 = clock;
@@ -26,9 +23,6 @@ function string=estelle_code()
     while etime(clock, t0) < 4
           % get data from the inlet
             [data,time] = inlet.pull_sample();
-            % and display it
-            %fprintf('%.2f\t',data);
-            %fprintf('%.5f\n',time);
             DROITEDROITE(i,1)=time;
             DROITEDROITE(i,2)=data(1);
             DROITEDROITE(i,3)=data(2);
@@ -36,7 +30,7 @@ function string=estelle_code()
             i=i+1;
     end
 
-    disp('what is the next direction ?');  
+    disp('You have moved your head to the:');  
     string=Excelmatlab(DROITEDROITE);
     return
 end
