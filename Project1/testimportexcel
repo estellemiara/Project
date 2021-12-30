@@ -1,33 +1,32 @@
-%import the excel table and transform the TimeStamp to a readable time
-%that starts at 0s
+%import the excel table and transform the TimeStamp to a readable time that starts at 0s
 
-%datecell.TimeStamp=datenum(char(datecell.TimeStamp), 'yyyy-mm-dd HH:MM:SS.FFF');
-%ts=datecell.TimeStamp; 
-%ts=ts*24*60*60; 
-%ts=ts-ts(1);
-%datecell.TimeStamp=ts;
+datecell.TimeStamp=datenum(char(datecell.TimeStamp), 'yyyy-mm-dd HH:MM:SS.FFF');
+ts=datecell.TimeStamp; 
+ts=ts*24*60*60; 
+ts=ts-ts(1);
+datecell.TimeStamp=ts;
 
 %display the graphs
 
-figure(1);
+figure(1);  %AF7
 plot(datecell.TimeStamp,datecell.RAW_AF7);
 title('AF7'); 
 xlabel('time [s]'); 
 ylabel('Raw Signal of AF7'); 
 
-figure(2);
+figure(2);  %AF8
 plot(datecell.TimeStamp,datecell.RAW_AF8);
 title('AF8'); 
 xlabel('time [s]'); 
 ylabel('Raw Signal of AF8'); 
 
-figure(3);
+figure(3);  %TP9
 plot(datecell.TimeStamp,datecell.RAW_TP9);
 title('TP9'); 
 xlabel('time [s]'); 
 ylabel('Raw Signal of TP9'); 
 
-figure(4);
+figure(4);  %TP10
 plot(datecell.TimeStamp,datecell.RAW_TP10);
 title('TP10'); 
 xlabel('time [s]'); 
@@ -53,6 +52,7 @@ testbl2=blink2;
 for i=1:l
     testbl2(i,2)=abs(testbl2(i,2)-800);
 end
+
 
 [pks,locs,widths,proms] = findpeaks(testbl1(:,2),testbl2(:,1),'MinPeakProminence',50);
 
