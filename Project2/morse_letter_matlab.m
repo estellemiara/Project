@@ -1,8 +1,8 @@
 
 function morse_letter_matlab(text1)
 %create a dictionnary
-morse={'.-','--','..-','...','-...','-', '--.'};
-letter={'A','M','U','S','E','B','T'};
+morse={'...','..-','.-.','.--','-..','-.-', '--.', '---'};
+letter={'PLANE','EYES','BRAIN','GAME','HEAD','PISTOL','BOMB', 'SOS'};
 %----------------
 message=sprintf('The translation of the morse code is:\n'); 
 fprintf(message); 
