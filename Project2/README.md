@@ -6,6 +6,6 @@ The Matlab function ImportAutomatic, imports the most recent Excel File in the s
 
 The Matlab function long_or_short_blink, matches each blinks to its mode: long (-) or short(.) ; and translates it into a new string.
 
-The Matlab function morse_letter_image contains the dictionnary (defined according to our conveniennce), and translates each string of '.' '-' into letters.
+The Matlab function morse_letter_matlab contains the dictionnary (defined according to our conveniennce), and translates each string of '.' '-' into letters.
 
 The Matlab function read_image displays the image that matches its name and the string according to the last function. 
