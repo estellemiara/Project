@@ -18,4 +18,4 @@
     end
     message=sprintf('The morse code obtained is: %s \n',str);
     fprintf(message);
-    morse_image_matlab(str);
+    morse_letter_matlab(str);
